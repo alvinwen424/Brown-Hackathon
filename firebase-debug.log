@@ -1,0 +1,246 @@
+[debug] [2017-12-21T03:20:59.161Z] ----------------------------------------------------------------------
+[debug] [2017-12-21T03:20:59.164Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2017-12-21T03:20:59.164Z] CLI Version:   3.14.0
+[debug] [2017-12-21T03:20:59.164Z] Platform:      darwin
+[debug] [2017-12-21T03:20:59.164Z] Node Version:  v8.2.1
+[debug] [2017-12-21T03:20:59.164Z] Time:          Wed Dec 20 2017 22:20:59 GMT-0500 (EST)
+[debug] [2017-12-21T03:20:59.165Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-21T03:20:59.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-21T03:20:59.185Z] > authorizing via signed-in user
+[debug] [2017-12-21T03:20:59.188Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-21T03:20:59.188Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aHSepQW1j8dsMHGAAFN1HL4VpcXTbhpIAf7TiBpqfpw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Dec 20 2017 22:20:59 GMT-0500 (EST)
+[debug] [2017-12-21T03:20:59.549Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:20:59.566Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 22:20:59 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:00.040Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:21:00.041Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Wed Dec 20 2017 22:21:00 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:00.462Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-12-21T03:21:00.864Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Wed Dec 20 2017 22:21:00 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:00.864Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Wed Dec 20 2017 22:21:00 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:00.865Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 22:21:00 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:01.245Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:21:01.246Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Wed Dec 20 2017 22:21:01 GMT-0500 (EST)
+[debug] [2017-12-21T03:21:01.269Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:21:01.324Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:21:01.792Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2017-12-21T03:40:07.276Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T03:40:07.302Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T03:41:25.445Z] ----------------------------------------------------------------------
+[debug] [2017-12-21T03:41:25.613Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2017-12-21T03:41:25.614Z] CLI Version:   3.14.0
+[debug] [2017-12-21T03:41:25.614Z] Platform:      darwin
+[debug] [2017-12-21T03:41:25.614Z] Node Version:  v8.2.1
+[debug] [2017-12-21T03:41:25.617Z] Time:          Wed Dec 20 2017 22:41:25 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:25.617Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-21T03:41:25.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-21T03:41:25.657Z] > authorizing via signed-in user
+[debug] [2017-12-21T03:41:25.665Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 22:41:25 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:26.485Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:41:26.486Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Wed Dec 20 2017 22:41:26 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:26.967Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-12-21T03:41:28.471Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Wed Dec 20 2017 22:41:28 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:28.472Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Wed Dec 20 2017 22:41:28 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:28.473Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 22:41:28 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:28.841Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:41:28.870Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:41:28.871Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Wed Dec 20 2017 22:41:28 GMT-0500 (EST)
+[debug] [2017-12-21T03:41:28.936Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T03:41:29.323Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2017-12-21T04:03:54.273Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:03:54.504Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:10:43.521Z] ----------------------------------------------------------------------
+[debug] [2017-12-21T04:10:43.528Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2017-12-21T04:10:43.529Z] CLI Version:   3.14.0
+[debug] [2017-12-21T04:10:43.529Z] Platform:      darwin
+[debug] [2017-12-21T04:10:43.530Z] Node Version:  v8.2.1
+[debug] [2017-12-21T04:10:43.531Z] Time:          Wed Dec 20 2017 23:10:43 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:43.531Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-21T04:10:43.612Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-21T04:10:43.612Z] > authorizing via signed-in user
+[debug] [2017-12-21T04:10:43.628Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-21T04:10:43.629Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aHSepQW1j8dsMHGAAFN1HL4VpcXTbhpIAf7TiBpqfpw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Dec 20 2017 23:10:43 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:43.988Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:10:43.999Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:10:43 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:44.605Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:10:44.606Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Wed Dec 20 2017 23:10:44 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:44.939Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-12-21T04:10:45.853Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Wed Dec 20 2017 23:10:45 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:45.854Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Wed Dec 20 2017 23:10:45 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:45.854Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:10:45 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:46.318Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:10:46.319Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Wed Dec 20 2017 23:10:46 GMT-0500 (EST)
+[debug] [2017-12-21T04:10:46.329Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:10:46.383Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:10:46.902Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2017-12-21T04:14:05.263Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:14:05.283Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:19:50.363Z] ----------------------------------------------------------------------
+[debug] [2017-12-21T04:19:50.369Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2017-12-21T04:19:50.369Z] CLI Version:   3.14.0
+[debug] [2017-12-21T04:19:50.369Z] Platform:      darwin
+[debug] [2017-12-21T04:19:50.369Z] Node Version:  v8.2.1
+[debug] [2017-12-21T04:19:50.373Z] Time:          Wed Dec 20 2017 23:19:50 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:50.373Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-21T04:19:50.411Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-21T04:19:50.412Z] > authorizing via signed-in user
+[debug] [2017-12-21T04:19:50.417Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:19:50 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:51.095Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:19:51.096Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Wed Dec 20 2017 23:19:51 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:51.549Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-12-21T04:19:53.383Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Wed Dec 20 2017 23:19:53 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:53.390Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Wed Dec 20 2017 23:19:53 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:53.391Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:19:53 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:54.127Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:19:54.130Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Wed Dec 20 2017 23:19:54 GMT-0500 (EST)
+[debug] [2017-12-21T04:19:54.135Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:19:54.215Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:19:54.802Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2017-12-21T04:28:24.400Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:28:24.704Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-12-21T04:28:52.549Z] ----------------------------------------------------------------------
+[debug] [2017-12-21T04:28:52.557Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2017-12-21T04:28:52.558Z] CLI Version:   3.14.0
+[debug] [2017-12-21T04:28:52.559Z] Platform:      darwin
+[debug] [2017-12-21T04:28:52.559Z] Node Version:  v8.2.1
+[debug] [2017-12-21T04:28:52.564Z] Time:          Wed Dec 20 2017 23:28:52 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:52.564Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-21T04:28:52.750Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-21T04:28:52.750Z] > authorizing via signed-in user
+[debug] [2017-12-21T04:28:52.754Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:28:52 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:53.570Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:28:53.571Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Wed Dec 20 2017 23:28:53 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:53.966Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-12-21T04:28:56.972Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Wed Dec 20 2017 23:28:56 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:56.979Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Wed Dec 20 2017 23:28:56 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:56.980Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Wed Dec 20 2017 23:28:56 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:57.352Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:28:57.367Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:28:57.368Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Wed Dec 20 2017 23:28:57 GMT-0500 (EST)
+[debug] [2017-12-21T04:28:57.526Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-21T04:28:58.088Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2017-12-21T04:45:17.997Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
