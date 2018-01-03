@@ -8,11 +8,11 @@ export default class NavBar extends Component {
   render() {
     return (
       <Navbar brand="ToGoBOX" right>
-        <NavItem href="get-started.html">Menu</NavItem>
-        <NavItem href="get-started.html">Restaurants</NavItem>
-        <NavItem href="get-started.html">Reviews</NavItem>
-        <NavItem href="get-started.html">Login</NavItem>
-        <NavItem href="get-started.html">Signup</NavItem>
+        <NavItem href="/menu">Menu</NavItem>
+        <NavItem href="/rest">Restaurants</NavItem>
+        <NavItem href="/review">Reviews</NavItem>
+        <NavItem href="/login">Login</NavItem>
+        <NavItem href="/signup">Signup</NavItem>
       </Navbar>
     );
   }
