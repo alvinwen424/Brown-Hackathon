@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase, { auth } from '~/fire';
 import Routes from './Routes';
-import { NavBar } from './Navbar';
+import NavBar from './Navbar';
 
 export default class App extends Component {
   constructor(props) {
@@ -26,6 +26,11 @@ export default class App extends Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <div>
+        <NavBar />
+        <Routes />
+      </div>
+    );
   }
 }

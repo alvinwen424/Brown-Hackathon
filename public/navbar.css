@@ -1,0 +1,30 @@
+nav {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav .nav-wrapper a {
+  color: black;
+}
+
+.brand-logo {
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+}
+.brand-jpeg {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.profile-photo {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
