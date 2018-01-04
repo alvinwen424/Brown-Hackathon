@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import SignUp from './SignUp';
 import '~/public/signup.css';
-import { Button, Row, Col, Card, Input, Icon } from 'react-materialize';
+import { Button, Row, Col, Card, Input } from 'react-materialize';
 import LoaderButton from './LoaderButton';
+import { db, auth } from '~/fire';
+import history from '../history';
 
-export default class SignUpContainer extends Component {
+export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,6 +13,7 @@ export default class SignUpContainer extends Component {
       lastname: '',
       email: '',
       password: '',
+      confirmpassword: '',
       dob: '',
       referrer: '',
       pickup: '',
@@ -28,23 +30,44 @@ export default class SignUpContainer extends Component {
   validateInput = () => {
     return (
       this.state.firstname.length > 0 &&
+      this.state.lastname.length > 0 &&
+      this.state.email.length > 0 &&
       this.state.password.length > 0 &&
-      this.state.email.length > 0
+      this.state.dob.length > 0 &&
+      this.state.confirmpassword.length > 0 &&
+      this.state.password === this.state.confirmpassword
     );
   };
+
   handleSubmit = evt => {
     evt.preventDefault();
     this.setState({ isLoading: true });
-    const credentials = {
-      email: evt.target.email.value,
-      password: evt.target.password.value,
-      name: evt.target.name.value
-    };
-    this.props.signup(credentials, this.props.history).catch(e => {
-      alert(e);
-      this.props.whoami();
-      this.setState({ isLoading: false });
-    });
+    auth
+      .createUserWithEmailAndPassword(
+        evt.target.email.value,
+        evt.target.password.value
+      )
+      .then(newUser => {
+        alert(newUser);
+        db
+          .collection('users')
+          .doc(newUser.uid)
+          .set({
+            firstname: this.state.firstname,
+            lastname: this.state.lastname,
+            email: this.state.email,
+            dob: this.state.dob,
+            pickup: this.state.pickup,
+            referrer: this.state.referrer,
+            uid: newUser.uid
+          })
+          .then(result => {
+            newUser.sendEmailVerification();
+            alert(`Verification email sent to ${this.state.email}`);
+            this.setState({ isLoading: false });
+            history.push('/');
+          });
+      });
   };
 
   render() {
@@ -62,18 +85,30 @@ export default class SignUpContainer extends Component {
               <Row>
                 <Input
                   autoFocus
-                  name="name"
+                  name="firstname"
                   offset="m1"
                   className="blue-text"
                   s={12}
                   m={10}
-                  label="Name"
+                  label="First Name"
                   validate
                   value={this.state.firstname}
                   onChange={this.handleInput}
-                >
-                  <Icon className="blue-text">account_circle</Icon>
-                </Input>
+                />
+              </Row>
+              <Row>
+                <Input
+                  autoFocus
+                  name="lastname"
+                  offset="m1"
+                  className="blue-text"
+                  s={12}
+                  m={10}
+                  label="Last Name"
+                  validate
+                  value={this.state.lastname}
+                  onChange={this.handleInput}
+                />
               </Row>
               <Row>
                 <Input
@@ -83,15 +118,13 @@ export default class SignUpContainer extends Component {
                   s={12}
                   m={10}
                   className="blue-text"
-                  label="Email"
+                  label="Email Address"
                   id="email"
                   validate
                   value={this.state.email}
                   type="email"
                   onChange={this.handleInput}
-                >
-                  <Icon className="blue-text">email</Icon>
-                </Input>
+                />
               </Row>
               <Row>
                 <Input
@@ -105,9 +138,64 @@ export default class SignUpContainer extends Component {
                   s={12}
                   m={10}
                   onChange={this.handleInput}
-                >
-                  <Icon className="blue-text">vpn_key</Icon>
-                </Input>
+                />
+              </Row>
+              <Row>
+                <Input
+                  name="confirmpassword"
+                  id="confirmpassword"
+                  offset="m1"
+                  className="blue-text"
+                  type="password"
+                  label="Confirm Password"
+                  value={this.state.confirmpassword}
+                  s={12}
+                  m={10}
+                  onChange={this.handleInput}
+                />
+              </Row>
+              <Row>
+                <Input
+                  name="dob"
+                  offset="m1"
+                  id="dob"
+                  s={12}
+                  m={10}
+                  className="blue-text"
+                  label="Date of Birth"
+                  id="dob"
+                  validate
+                  value={this.state.dob}
+                  onChange={this.handleInput}
+                />
+              </Row>
+              <Row>
+                <Input
+                  name="referrer"
+                  offset="m1"
+                  s={12}
+                  m={10}
+                  className="blue-text"
+                  label="Referred from"
+                  id="referrer"
+                  validate
+                  value={this.state.referrer}
+                  onChange={this.handleInput}
+                />
+              </Row>
+              <Row>
+                <Input
+                  name="pickup"
+                  offset="m1"
+                  id="pickup"
+                  s={12}
+                  m={10}
+                  className="blue-text"
+                  label="pickup"
+                  validate
+                  value={this.state.pickup}
+                  onChange={this.handleInput}
+                />
               </Row>
               <Row>
                 <Col
