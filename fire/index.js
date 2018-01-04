@@ -5,8 +5,7 @@ import setup from './setup';
 setup(firebase);
 
 export default firebase;
-export const firestore = firebase.firestore();
-export const database = firebase.database();
+export const db = firebase.firestore();
 export const auth = firebase.auth();
 export const storage = firebase.storage();
 
