@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from '../history';
 import Menu from './Menu';
-import SignUp from './SignUp';
+import Register from './Register';
 import Login from './Login';
 
 export default class Routes extends Component {
@@ -12,7 +12,7 @@ export default class Routes extends Component {
         <Switch>
           <Route path="/menu" render={() => <Menu />} />
           <Route path="/login" render={() => <Login />} />
-          <Route path="/signup" render={() => <SignUp />} />
+          <Route path="/register" render={() => <Register />} />
         </Switch>
       </Router>
     );

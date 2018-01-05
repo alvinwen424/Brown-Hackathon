@@ -1,0 +1,36 @@
+[debug] [2018-01-05T03:40:32.165Z] ----------------------------------------------------------------------
+[debug] [2018-01-05T03:40:32.167Z] Command:       /usr/local/bin/node /Users/apple/Desktop/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2018-01-05T03:40:32.167Z] CLI Version:   3.14.0
+[debug] [2018-01-05T03:40:32.167Z] Platform:      darwin
+[debug] [2018-01-05T03:40:32.167Z] Node Version:  v8.2.1
+[debug] [2018-01-05T03:40:32.168Z] Time:          Thu Jan 04 2018 22:40:32 GMT-0500 (EST)
+[debug] [2018-01-05T03:40:32.168Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-05T03:40:32.183Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-05T03:40:32.184Z] > authorizing via signed-in user
+[debug] [2018-01-05T03:40:32.186Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/togobox-ab248  
+ Thu Jan 04 2018 22:40:32 GMT-0500 (EST)
+[debug] [2018-01-05T03:40:32.611Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-05T03:40:32.612Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/togobox-ab248/tokens  
+ Thu Jan 04 2018 22:40:32 GMT-0500 (EST)
+[debug] [2018-01-05T03:40:59.493Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/apple/Desktop/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-05T03:40:59.908Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/togobox-ab248  
+ Thu Jan 04 2018 22:40:59 GMT-0500 (EST)
+[debug] [2018-01-05T03:40:59.909Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/togobox-ab248/apiKeys  
+ Thu Jan 04 2018 22:40:59 GMT-0500 (EST)
+[debug] [2018-01-05T03:40:59.909Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/togobox-ab248  
+ Thu Jan 04 2018 22:40:59 GMT-0500 (EST)
+[debug] [2018-01-05T03:41:00.175Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-05T03:41:00.201Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-05T03:41:00.201Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/596575621684/clients/_:getWebAppConfig  
+ Thu Jan 04 2018 22:41:00 GMT-0500 (EST)
+[debug] [2018-01-05T03:41:00.245Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-05T03:41:00.543Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/togobox-ab248/us-central1/helloWorld

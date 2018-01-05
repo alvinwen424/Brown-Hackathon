@@ -12,7 +12,7 @@ export default class NavBar extends Component {
         <NavItem href="/rest">Restaurants</NavItem>
         <NavItem href="/review">Reviews</NavItem>
         <NavItem href="/login">Login</NavItem>
-        <NavItem href="/signup">Signup</NavItem>
+        <NavItem href="/register">Register</NavItem>
       </Navbar>
     );
   }
