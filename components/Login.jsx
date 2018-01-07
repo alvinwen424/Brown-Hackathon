@@ -58,6 +58,7 @@ export default class Login extends Component {
             <form onSubmit={this.handleSubmit}>
               <Row>
                 <Input
+                  autoFocus
                   name="email"
                   offset="m1"
                   s={12}
