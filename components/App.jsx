@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import firebase, { auth } from '~/fire';
-import Routes from './Routes';
-import NavBar from './Navbar';
+import { Routes } from './Routes';
+import { NavBar } from './Navbar';
 
 export default class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      user: {},
-      userEmail: '',
+      currentUser: {},
+      email: '',
       uid: ''
     };
   }
 
   componentDidMount() {
-    this.unsubscribe = auth.onAuthStateChanged(user =>
+    this.unsubscribe = auth.onAuthStateChanged(currentUser =>
       this.setState({
-        user
+        currentUser
       })
     );
   }
@@ -28,8 +28,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Routes />
+        <NavBar currentUser={this.state.currentUser} />
+        <Routes currentUser={this.state.currentUser} />
       </div>
     );
   }

@@ -100,7 +100,6 @@ export default class Register extends Component {
               </Row>
               <Row>
                 <Input
-                  autoFocus
                   name="lastname"
                   offset="m1"
                   className="blue-text"
