@@ -8,6 +8,7 @@ export default class Menu extends Component {
   }
 
   render () {
+    //If you need user, user firebase.auth().currentUser
     return (
       <div className="menu" >
         <div>

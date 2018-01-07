@@ -4,6 +4,7 @@ import history from '../history';
 import Menu from './Menu';
 import Register from './Register';
 import Login from './Login';
+import Checkout from './Checkout'
 
 export const Routes = ({ currentUser }) => {
   return (
@@ -12,11 +13,12 @@ export const Routes = ({ currentUser }) => {
         <Route
           exact
           path="/"
-          render={() => <Menu currentUser={currentUser} />}
+          render={() => <Menu />}
         />
         <Route path="/menu" render={() => <Menu />} />
         <Route path="/login" render={() => <Login />} />
         <Route path="/register" render={() => <Register />} />
+        <Route path="/checkout" render={() =>  <Checkout  />} />
       </Switch>
     </Router>
   );
