@@ -5,7 +5,9 @@ import { Navbar, NavItem, Dropdown, Modal } from 'react-materialize';
 import '~/public/navbar.css';
 
 export const NavBar = ({ currentUser }) =>
-  <Navbar brand="ToGoBOX" right>
+  <Navbar brand="Brown Housing" right>
+    <NavItem href="/requests">Requests</NavItem>
+    <NavItem href="/housing">Housing</NavItem>
     <NavItem href="/review">Reviews</NavItem>
     {!currentUser || currentUser.isAnonymous
       ? [
