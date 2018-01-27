@@ -6,11 +6,13 @@ import Login from './Login';
 import Checkout from './Checkout'
 import Housing from './Housing'
 import Requests from './Requests'
+import SingleHome from './SingleHome'
 
 export const Routes = ({ currentUser }) => {
   return (
     <Router history={history}>
       <Switch>
+        <Route path="/home/:id" component={SingleHome} />
         <Route path="/housing" render={() => <Housing />} />
         <Route path="/requests" render={() => <Requests />} />
         <Route path="/login" render={() => <Login />} />
