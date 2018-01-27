@@ -6,8 +6,6 @@ import '~/public/navbar.css';
 
 export const NavBar = ({ currentUser }) =>
   <Navbar brand="ToGoBOX" right>
-    <NavItem href="/menu">Menu</NavItem>
-    <NavItem href="/rest">Restaurants</NavItem>
     <NavItem href="/review">Reviews</NavItem>
     {!currentUser || currentUser.isAnonymous
       ? [

@@ -15,7 +15,6 @@ export const Routes = ({ currentUser }) => {
           path="/"
           render={() => <Menu />}
         />
-        <Route path="/menu" render={() => <Menu />} />
         <Route path="/login" render={() => <Login />} />
         <Route path="/register" render={() => <Register />} />
         <Route path="/checkout" render={() =>  <Checkout  />} />

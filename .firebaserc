@@ -1,5 +1,6 @@
 {
   "projects": {
-    "togobox-test": "togobox-ab248"
+    "togobox-test": "togobox-ab248",
+    "staging": "brown-hackathon"
   }
 }
