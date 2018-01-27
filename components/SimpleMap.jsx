@@ -128,7 +128,8 @@ export default class SimpleMap extends Component {
             </a>
             <br />
             <b>Recommended By</b>
-<br />;          </div>
+            <br />;{' '}
+          </div>
         ),
         showInfo: false,
         handler: this.handleOwnMarkerClose,
@@ -182,7 +183,9 @@ export default class SimpleMap extends Component {
   render() {
     return (
       <SearchBoxExampleGoogleMap
-        containerElement={<div style={{ height: `95vh`, width: `50%` }} />}
+        containerElement={
+          <div style={{ float: `left`, height: `95vh`, width: `50%` }} />
+        }
         mapElement={<div style={{ height: `95vh` }} />}
         center={this.state.center}
         onMapMounted={this.handleMapMounted}
