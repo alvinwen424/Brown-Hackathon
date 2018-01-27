@@ -13,10 +13,7 @@ export default class Register extends Component {
       lastname: '',
       email: '',
       password: '',
-      confirmpassword: '',
-      dob: '',
-      referrer: '',
-      pickup: '',
+      university: '',
       isLoading: false
     };
   }
@@ -32,10 +29,7 @@ export default class Register extends Component {
       this.state.firstname.length > 0 &&
       this.state.lastname.length > 0 &&
       this.state.email.length > 0 &&
-      this.state.password.length > 0 &&
-      this.state.dob.length > 0 &&
-      this.state.confirmpassword.length > 0 &&
-      this.state.password === this.state.confirmpassword
+      this.state.password.length > 0
     );
   };
 
@@ -44,7 +38,7 @@ export default class Register extends Component {
     this.setState({ isLoading: true });
     auth
       .createUserWithEmailAndPassword(
-        evt.target.email.value,
+        evt.target.email.value + evt.target.university.value,
         evt.target.password.value
       )
       .then(newUser => {
@@ -54,10 +48,7 @@ export default class Register extends Component {
           .set({
             firstname: this.state.firstname,
             lastname: this.state.lastname,
-            email: this.state.email,
-            dob: this.state.dob,
-            pickup: this.state.pickup,
-            referrer: this.state.referrer,
+            email: this.state.email + this.state.university,
             uid: newUser.uid
           })
           .then(result => {
@@ -116,16 +107,27 @@ export default class Register extends Component {
                   name="email"
                   offset="m1"
                   id="email"
-                  s={12}
-                  m={10}
+                  s={6}
+                  m={5}
                   className="blue-text"
                   label="Email Address"
                   id="email"
                   validate
                   value={this.state.email}
-                  type="email"
                   onChange={this.handleInput}
                 />
+                <Input
+                  s={6}
+                  m={5}
+                  name="university"
+                  type="select"
+                  defaultValue="1"
+                  onChange={this.handleInput}
+                >
+                  <option value="@brown.edu">@brown.edu</option>
+                  <option value="@jwu.edu">@jwu.edu</option>
+                  <option value="@risd.edu">@risd.edu</option>
+                </Input>
               </Row>
               <Row>
                 <Input
@@ -138,63 +140,6 @@ export default class Register extends Component {
                   value={this.state.password}
                   s={12}
                   m={10}
-                  onChange={this.handleInput}
-                />
-              </Row>
-              <Row>
-                <Input
-                  name="confirmpassword"
-                  id="confirmpassword"
-                  offset="m1"
-                  className="blue-text"
-                  type="password"
-                  label="Confirm Password"
-                  value={this.state.confirmpassword}
-                  s={12}
-                  m={10}
-                  onChange={this.handleInput}
-                />
-              </Row>
-              <Row>
-                <Input
-                  name="dob"
-                  offset="m1"
-                  id="dob"
-                  s={12}
-                  m={10}
-                  className="blue-text"
-                  label="Date of Birth"
-                  id="dob"
-                  validate
-                  value={this.state.dob}
-                  onChange={this.handleInput}
-                />
-              </Row>
-              <Row>
-                <Input
-                  name="referrer"
-                  offset="m1"
-                  s={12}
-                  m={10}
-                  className="blue-text"
-                  label="Referred from"
-                  id="referrer"
-                  validate
-                  value={this.state.referrer}
-                  onChange={this.handleInput}
-                />
-              </Row>
-              <Row>
-                <Input
-                  name="pickup"
-                  offset="m1"
-                  id="pickup"
-                  s={12}
-                  m={10}
-                  className="blue-text"
-                  label="pickup"
-                  validate
-                  value={this.state.pickup}
                   onChange={this.handleInput}
                 />
               </Row>

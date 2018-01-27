@@ -1,0 +1,44 @@
+[debug] [2018-01-27T18:11:17.034Z] ----------------------------------------------------------------------
+[debug] [2018-01-27T18:11:17.037Z] Command:       /usr/local/bin/node /Users/apple/Desktop/Brown-Hackathon/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2018-01-27T18:11:17.037Z] CLI Version:   3.14.0
+[debug] [2018-01-27T18:11:17.037Z] Platform:      darwin
+[debug] [2018-01-27T18:11:17.037Z] Node Version:  v8.2.1
+[debug] [2018-01-27T18:11:17.038Z] Time:          Sat Jan 27 2018 13:11:17 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:17.038Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-27T18:11:17.057Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-27T18:11:17.058Z] > authorizing via signed-in user
+[debug] [2018-01-27T18:11:17.060Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-27T18:11:17.061Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Lh-i12q-0pY1Cp4O-WvXVif1J5NY9F7o0ota_DjtCLw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Jan 27 2018 13:11:17 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:17.258Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-27T18:11:17.283Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/brown-hackathon  
+ Sat Jan 27 2018 13:11:17 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:17.617Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-27T18:11:17.618Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/brown-hackathon/tokens  
+ Sat Jan 27 2018 13:11:17 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:17.937Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/apple/Desktop/Brown-Hackathon'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-27T18:11:18.513Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/brown-hackathon  
+ Sat Jan 27 2018 13:11:18 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:18.514Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/brown-hackathon/apiKeys  
+ Sat Jan 27 2018 13:11:18 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:18.514Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/brown-hackathon  
+ Sat Jan 27 2018 13:11:18 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:18.765Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-27T18:11:18.766Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943416784152/clients/_:getWebAppConfig  
+ Sat Jan 27 2018 13:11:18 GMT-0500 (EST)
+[debug] [2018-01-27T18:11:18.783Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-27T18:11:18.891Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-27T18:11:19.019Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/brown-hackathon/us-central1/helloWorld
