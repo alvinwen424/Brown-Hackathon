@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase, { auth } from '~/fire';
 import { Routes } from './Routes';
 import { NavBar } from './Navbar';
+import SimpleMap from './SimpleMap';
 
 export default class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar currentUser={this.state.currentUser} />
+        <SimpleMap />
         <Routes currentUser={this.state.currentUser} />
       </div>
     );
