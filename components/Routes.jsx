@@ -33,7 +33,7 @@ export const Routes = ({ currentUser }) => {
         <AuthRoute
           authed={currentUser}
           exact
-          path="/housing"
+          path="/rentals"
           component={Housing}
         />
         <AuthRoute

@@ -30,7 +30,6 @@ export default class Login extends Component {
     evt.preventDefault();
     this.setState({ isLoading: true });
     let email = this.state.email + this.state.university;
-    console.log(email);
     auth
       .signInWithEmailAndPassword(email, this.state.password)
       .then(currentUser => {
