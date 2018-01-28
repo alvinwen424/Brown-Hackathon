@@ -6,6 +6,7 @@ import '~/public/navbar.css';
 
 export const NavBar = ({ currentUser }) =>
   <Navbar brand="CheckHouse" right>
+    <NavItem href="/findAssistance">Find Assistance</NavItem>
     <NavItem href="/assist">Assist</NavItem>
     <NavItem href="/housing">Housing</NavItem>
     <NavItem href="/review">Reviews</NavItem>

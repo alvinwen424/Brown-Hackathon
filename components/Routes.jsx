@@ -10,6 +10,7 @@ import AuthRoute from './AuthRoute';
 import Home from './Home';
 import CreateHome from './CreateHome';
 import Assist from './Assist'
+import FindAssistance from './FindAssitance'
 
 export const Routes = ({ currentUser }) => {
   return (
@@ -23,6 +24,12 @@ export const Routes = ({ currentUser }) => {
               ? <Housing currentUser={currentUser} />
               : <Home currentUser={currentUser} />;
           }}
+        />
+        <AuthRoute
+          authed={currentUser}
+          exact
+          path="/findAssistance"
+          component={FindAssistance}
         />
         <AuthRoute
           authed={currentUser}
