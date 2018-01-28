@@ -5,31 +5,59 @@ export default class CreateHome extends Component {
   constructor() {
     super()
     this.state ={
-      file: {}
+      files: [],
+      imagePreviewUrl: []
     }
   }
 
   onChange = (e) => {
-    this.setState({file: e.target.files[0]})
-    console.log('file', e.target.files[0] )
+    let reader = new FileReader();
+    let file = e.target.files[0];
+    let { files, imagePreviewUrl } = this.state
+    reader.onloadend = () => {
+      this.setState({
+        file: [...files, file],
+        imagePreviewUrl: [...imagePreviewUrl, reader.result]
+      });
+    }
+    reader.readAsDataURL(file)
+  }
+
+  onClick = (e) => {
   }
 
   onSubmit = (e) => {
-    let { file } = this.state
-    e.preventDefault()
+    let { files } = this.state
+    let { email } = auth.currentUser
     let storageRef = storage.ref()
-    storageRef.child(`/images/${file.name}`).put(file).then((snapshot) => {
-       console.log('uploaded a file')
-    })
+    e.preventDefault()
+    storageRef.constructor.prototype.putFiles = function(files) {
+      return Promise.all(files.map(function(files) {
+        return storageRef.child(`/images/${email}/${files.name}`).put(files)
+      }));
+    }
+
+    storageRef.putFiles(files).then(function(metadatas) {
+      // Get an array of file metadata
+      console.log('metaData', metadatas)
+    }).catch(function(error) {
+      console.error(error)
+    });
   }
 
   render (){
+    let { files, imagePreviewUrl } = this.state
     return(
       <div>
         <form onSubmit={this.onSubmit}>
           <input type="file" onChange={this.onChange} />
           <button type="submit">Upload</button>
         </form>
+        {imagePreviewUrl && imagePreviewUrl.map(url => {
+          return(
+            <img src={url} onClick={() => this.onClick(url)} />
+          )
+        })}
       </div>
     )
   }
