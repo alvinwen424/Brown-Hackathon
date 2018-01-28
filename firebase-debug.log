@@ -155,3 +155,58 @@
     at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2018-01-28T04:43:09.565Z] ----------------------------------------------------------------------
+[debug] [2018-01-28T04:43:09.569Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/brown-hack/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2018-01-28T04:43:09.569Z] CLI Version:   3.14.0
+[debug] [2018-01-28T04:43:09.569Z] Platform:      darwin
+[debug] [2018-01-28T04:43:09.570Z] Node Version:  v8.2.1
+[debug] [2018-01-28T04:43:09.570Z] Time:          Sat Jan 27 2018 23:43:09 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:09.570Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-28T04:43:09.588Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-28T04:43:09.588Z] > authorizing via signed-in user
+[debug] [2018-01-28T04:43:09.594Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-28T04:43:09.594Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aHSepQW1j8dsMHGAAFN1HL4VpcXTbhpIAf7TiBpqfpw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Jan 27 2018 23:43:09 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:11.577Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T04:43:11.593Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/brown-hackathon  
+ Sat Jan 27 2018 23:43:11 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:12.124Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T04:43:12.126Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/brown-hackathon/tokens  
+ Sat Jan 27 2018 23:43:12 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:12.601Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/brown-hack/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-28T04:43:13.076Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/brown-hackathon  
+ Sat Jan 27 2018 23:43:13 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:13.076Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/brown-hackathon/apiKeys  
+ Sat Jan 27 2018 23:43:13 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:13.077Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/brown-hackathon  
+ Sat Jan 27 2018 23:43:13 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:13.359Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T04:43:13.415Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T04:43:13.415Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943416784152/clients/_:getWebAppConfig  
+ Sat Jan 27 2018 23:43:13 GMT-0500 (EST)
+[debug] [2018-01-28T04:43:13.505Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T04:43:13.914Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/brown-hackathon/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2018-01-28T06:53:35.353Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-01-28T06:53:35.356Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.

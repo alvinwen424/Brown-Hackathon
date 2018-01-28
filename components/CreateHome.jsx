@@ -6,7 +6,8 @@ export default class CreateHome extends Component {
     super()
     this.state ={
       files: [],
-      imagePreviewUrl: []
+      imagePreviewUrl: [],
+      info: ['Street', 'Apt', 'City', 'State', 'Price', 'Rooms', 'Restroom', 'Description', 'email']
     }
   }
 
@@ -27,6 +28,7 @@ export default class CreateHome extends Component {
   }
 
   onSubmit = (e) => {
+    console.log(e.target.Street.value)
     let { files } = this.state
     let { email } = auth.currentUser
     let storageRef = storage.ref()
@@ -50,6 +52,10 @@ export default class CreateHome extends Component {
     return(
       <div>
         <form onSubmit={this.onSubmit}>
+          <label>
+            Street:
+            <input type="text" name="Street"/>
+          </label>
           <input type="file" onChange={this.onChange} />
           <button type="submit">Upload</button>
         </form>
