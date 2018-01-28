@@ -18,7 +18,11 @@ export const Routes = ({ currentUser }) => {
         <Route
           exact
           path="/"
-          render={() => <Home currentUser={currentUser} />}
+          render={() => {
+            return currentUser
+              ? <Housing currentUser={currentUser} />
+              : <Home currentUser={currentUser} />;
+          }}
         />
         <AuthRoute
           authed={currentUser}

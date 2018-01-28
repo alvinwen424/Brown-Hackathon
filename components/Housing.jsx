@@ -29,33 +29,37 @@ export default class Housing extends Component {
   render() {
     let { houses } = this.state;
     return (
-      <div>
-        {houses.length &&
-          houses.map((el, idx) => {
-            let home = el.data();
-            let id = el.id;
+      <div className="houseList">
+        <div className="listContainer">
+          {houses.length &&
+            houses.map((el, idx) => {
+              let home = el.data();
+              let id = el.id;
 
-            return (
-              <div
-                className={idx % 2 == 0 ? 'homeInfo grayBack' : 'homeInfo'}
-                key={id}
-              >
-                <Link to={`/home/${id}`}>
-                  <div className="priceInfo">
-                    {home.Price}
-                  </div>
-                  <div className="roomInfo">
-                    Bedrooms: {home.Rooms} Restrooms: {home.Restroom}
-                  </div>
-                  <div className="addrInfo">
-                    {home.Street} {home.City} {home.State}
-                  </div>
-                  <div className="picInfo" />
-                  <div className="picInfo" />
-                </Link>
-              </div>
-            );
-          })}
+              return (
+                <div
+                  className={idx % 2 == 0 ? 'homeInfo grayBack' : 'homeInfo'}
+                  key={id}
+                >
+                  <Link to={`/home/${id}`}>
+                    <div className="priceInfo">
+                      {home.Price}
+                    </div>
+                    <div className="roomInfo">
+                      Bedrooms: {home.Rooms} Restrooms: {home.Restroom}
+                    </div>
+                    <div className="addrInfo">
+                      {home.Street} {home.City} {home.State}
+                    </div>
+                    <div className="userInfo">
+                      {home.userEmail}
+                    </div>
+                    <div className="picInfo" />
+                  </Link>
+                </div>
+              );
+            })}
+        </div>
       </div>
     );
   }

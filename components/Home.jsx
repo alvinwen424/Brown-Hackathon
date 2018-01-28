@@ -28,13 +28,14 @@ export default class Home extends React.Component {
               Are you an incoming student to universities in Providence? <br />Are
               you an international student?<br />We know it's damn hard to find
               good houses when you're not around here! <br />
-              Check out houses you're interested in as if you were actually here
-              yourself, and also make good friends.
+              Check out houses you're interested in as if you were actually
+              here,
+              <br />plus make some good friends.
               <br />
             </h4>
             <h2 className="header">
               Check House! <br />
-              - Ask help to students already living in Providence to become your
+              Ask help to students already living in Providence to become your
               one day realtor!
               <br />
             </h2>
