@@ -17,7 +17,7 @@ export default class CreateHome extends Component {
     let { files, imagePreviewUrl } = this.state
     reader.onloadend = () => {
       this.setState({
-        file: [...files, file],
+        files: [...files, file],
         imagePreviewUrl: [...imagePreviewUrl, reader.result]
       });
     }
