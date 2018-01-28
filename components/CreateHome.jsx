@@ -1,31 +1,35 @@
 import React, { Component } from 'react'
-import { db, auth } from '~/fire'
+import { db, storage, auth } from '~/fire'
 
 export default class CreateHome extends Component {
   constructor() {
     super()
     this.state ={
-      info: {}
+      file: {}
     }
   }
-  componentDidMount() {
-    db.collection('housing').doc(this.props.match.params.id).get()
-      .then((snapshot) => {
-        this.setState({info: snapshot.data()})
-      })
-      .catch((err) => {
-        console.log('Error getting documents', err);
-      })
+
+  onChange = (e) => {
+    this.setState({file: e.target.files[0]})
+    console.log('file', e.target.files[0] )
   }
+
+  onSubmit = (e) => {
+    let { file } = this.state
+    e.preventDefault()
+    let storageRef = storage.ref()
+    storageRef.child(`/images/${file.name}`).put(file).then((snapshot) => {
+       console.log('uploaded a file')
+    })
+  }
+
   render (){
-    let home = this.state.info
     return(
-      <div key={this.props.match.params.id}>
-        <h3>{home.Street} {home.City} {home.State}</h3>
-        <h4>Price: {home.Price}</h4>
-        <h4>Bedrooms: {home.Rooms} </h4>
-        <h4>Restrooms: {home.Restroom}</h4>
-        <h4>Description: {home.Description}</h4>
+      <div>
+        <form onSubmit={this.onSubmit}>
+          <input type="file" onChange={this.onChange} />
+          <button type="submit">Upload</button>
+        </form>
       </div>
     )
   }
