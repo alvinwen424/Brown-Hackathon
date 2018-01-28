@@ -1,0 +1,67 @@
+/*Video*/
+.video {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+h2.header {
+  color: #7df9a9;
+}
+h4 {
+  color: deeppink;
+}
+
+.mainLogin {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 5px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+/*Body Contents*/
+.wrapper {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.landing-banner {
+  margin: 0 auto;
+  top: 200px;
+  position: absolute;
+  padding: 5px;
+  text-align: left;
+  color: white;
+  margin-top: 10px;
+  line-height: 1.1em;
+}
+.landing-banner h3 {
+  font-size: 600%;
+  font-weight: bold;
+  font-family: "Marvel";
+  font-weight: 700;
+  font-style: italic;
+}
+.landing-banner h4 {
+  font-size: 200%;
+}

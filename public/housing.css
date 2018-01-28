@@ -1,0 +1,41 @@
+.homeInfo {
+  display: inline-block;
+  height: 140px;
+  vertical-align: middle;
+}
+
+.grayBack {
+  background-color: #f3f3f3;
+}
+.homeInfo:hover {
+  background-color: #bbb;
+}
+
+.priceInfo {
+  display: table-cell;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  vertical-align: middle;
+}
+.roomInfo {
+  display: table-cell;
+  text-align: center;
+  width: 200px;
+  height: 140px;
+  vertical-align: middle;
+}
+.addrInfo {
+  display: table-cell;
+  text-align: center;
+  width: 484px;
+  height: 140px;
+  vertical-align: middle;
+}
+.picInfo {
+  display: table-cell;
+  text-align: center;
+  width: 181px;
+  height: 140px;
+  vertical-align: middle;
+}

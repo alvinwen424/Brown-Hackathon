@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { db, auth } from '~/fire';
 import { Link } from 'react-router-dom';
+import '~/public/housing.css';
+
 export default class Housing extends Component {
   constructor() {
     super();
@@ -29,25 +31,28 @@ export default class Housing extends Component {
     return (
       <div>
         {houses.length &&
-          houses.map(el => {
+          houses.map((el, idx) => {
             let home = el.data();
             let id = el.id;
+
             return (
-              <div key={id}>
+              <div
+                className={idx % 2 == 0 ? 'homeInfo grayBack' : 'homeInfo'}
+                key={id}
+              >
                 <Link to={`/home/${id}`}>
-                  <h3>
+                  <div className="priceInfo">
+                    {home.Price}
+                  </div>
+                  <div className="roomInfo">
+                    Bedrooms: {home.Rooms} Restrooms: {home.Restroom}
+                  </div>
+                  <div className="addrInfo">
                     {home.Street} {home.City} {home.State}
-                  </h3>
+                  </div>
+                  <div className="picInfo" />
+                  <div className="picInfo" />
                 </Link>
-                <h4>
-                  Price: {home.Price}
-                </h4>
-                <h4>
-                  Bedrooms: {home.Rooms}{' '}
-                </h4>
-                <h4>
-                  Restrooms: {home.Restroom}
-                </h4>
               </div>
             );
           })}

@@ -30,7 +30,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar currentUser={this.state.currentUser} />
-        <SimpleMap />
+        {this.state.currentUser && <SimpleMap />}
         <Routes currentUser={this.state.currentUser} />
       </div>
     );
