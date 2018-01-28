@@ -7,7 +7,7 @@ import '~/public/navbar.css';
 export const NavBar = ({ currentUser }) =>
   <Navbar brand="CheckHouse" right>
     <NavItem href="/requests">Requests</NavItem>
-    <NavItem href="/housing">Housing</NavItem>
+    <NavItem href="/rentals">Rentals</NavItem>
     <NavItem href="/review">Reviews</NavItem>
     <NavItem href="/createHome">Post</NavItem>
     {!currentUser || currentUser.isAnonymous

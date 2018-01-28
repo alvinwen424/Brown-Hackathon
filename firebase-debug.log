@@ -210,3 +210,47 @@
     at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2018-01-28T06:57:08.878Z] ----------------------------------------------------------------------
+[debug] [2018-01-28T06:57:08.880Z] Command:       /usr/local/bin/node /Users/apple/Desktop/Brown-Hackathon/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2018-01-28T06:57:08.881Z] CLI Version:   3.14.0
+[debug] [2018-01-28T06:57:08.881Z] Platform:      darwin
+[debug] [2018-01-28T06:57:08.881Z] Node Version:  v8.2.1
+[debug] [2018-01-28T06:57:08.881Z] Time:          Sun Jan 28 2018 01:57:08 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:08.881Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-28T06:57:08.897Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-28T06:57:08.897Z] > authorizing via signed-in user
+[debug] [2018-01-28T06:57:08.899Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-28T06:57:08.899Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Lh-i12q-0pY1Cp4O-WvXVif1J5NY9F7o0ota_DjtCLw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jan 28 2018 01:57:08 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:09.054Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T06:57:09.068Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/brown-hackathon  
+ Sun Jan 28 2018 01:57:09 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:09.321Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T06:57:09.322Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/brown-hackathon/tokens  
+ Sun Jan 28 2018 01:57:09 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:09.655Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/apple/Desktop/Brown-Hackathon'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-28T06:57:10.212Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/brown-hackathon  
+ Sun Jan 28 2018 01:57:10 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:10.212Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/brown-hackathon/apiKeys  
+ Sun Jan 28 2018 01:57:10 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:10.213Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/brown-hackathon  
+ Sun Jan 28 2018 01:57:10 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:10.423Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T06:57:10.424Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943416784152/clients/_:getWebAppConfig  
+ Sun Jan 28 2018 01:57:10 GMT-0500 (EST)
+[debug] [2018-01-28T06:57:10.483Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T06:57:10.534Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-28T06:57:10.824Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/brown-hackathon/us-central1/helloWorld

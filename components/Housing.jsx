@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import '~/public/housing.css';
 
 export default class Housing extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       houses: []
     };
