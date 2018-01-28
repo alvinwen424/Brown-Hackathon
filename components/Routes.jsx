@@ -5,11 +5,12 @@ import Register from './Register';
 import Login from './Login';
 import Checkout from './Checkout';
 import Housing from './Housing';
-import Requests from './Requests';
 import SingleHome from './SingleHome';
 import AuthRoute from './AuthRoute';
 import Home from './Home';
 import CreateHome from './CreateHome';
+import Assist from './Assist'
+import FindAssistance from './FindAssitance'
 
 export const Routes = ({ currentUser }) => {
   return (
@@ -27,20 +28,26 @@ export const Routes = ({ currentUser }) => {
         <AuthRoute
           authed={currentUser}
           exact
+          path="/findAssistance"
+          component={FindAssistance}
+        />
+        <AuthRoute
+          authed={currentUser}
+          exact
+          path="/assist"
+          component={Assist}
+        />
+        <AuthRoute
+          authed={currentUser}
+          exact
           path="/home/:id"
           component={SingleHome}
         />
         <AuthRoute
           authed={currentUser}
           exact
-          path="/rentals"
+          path="/housing"
           component={Housing}
-        />
-        <AuthRoute
-          authed={currentUser}
-          exact
-          path="/requests"
-          component={Requests}
         />
         <AuthRoute
           authed={currentUser}
