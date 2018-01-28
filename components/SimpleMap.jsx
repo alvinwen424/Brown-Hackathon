@@ -107,9 +107,8 @@ export default class SimpleMap extends Component {
 
   handlePlacesChanged = () => {
     const places = this._searchBox.getPlaces();
-
+    console.log(places);
     const markers = places.map(place => {
-      console.log(place.name);
       let markerObj = {
         position: place.geometry.location,
         infoContent: (

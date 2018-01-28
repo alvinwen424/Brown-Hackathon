@@ -1,5 +1,5 @@
 import React from 'react';
-import '~/public/Home.css';
+import '~/public/home.css';
 import {
   Row,
   Col,
