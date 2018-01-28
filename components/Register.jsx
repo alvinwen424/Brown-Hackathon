@@ -13,7 +13,7 @@ export default class Register extends Component {
       lastname: '',
       email: '',
       password: '',
-      university: '',
+      university: '@brown.edu',
       isLoading: false
     };
   }

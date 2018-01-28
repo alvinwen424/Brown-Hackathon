@@ -11,6 +11,7 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: '',
+      university: '@brown.edu',
       isLoading: false
     };
   }
@@ -28,8 +29,10 @@ export default class Login extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
     this.setState({ isLoading: true });
+    let email = this.state.email + this.state.university;
+    console.log(email);
     auth
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .signInWithEmailAndPassword(email, this.state.password)
       .then(currentUser => {
         if (auth.currentUser.emailVerified) {
           history.push('/');
@@ -61,15 +64,26 @@ export default class Login extends Component {
                   autoFocus
                   name="email"
                   offset="m1"
-                  s={12}
-                  m={10}
+                  s={6}
+                  m={5}
                   className="blue-text"
                   label="Email"
                   value={this.state.email}
                   validate
-                  type="email"
                   onChange={this.handleInput}
                 />
+                <Input
+                  s={6}
+                  m={5}
+                  name="university"
+                  type="select"
+                  defaultValue="1"
+                  onChange={this.handleInput}
+                >
+                  <option value="@brown.edu">@brown.edu</option>
+                  <option value="@jwu.edu">@jwu.edu</option>
+                  <option value="@risd.edu">@risd.edu</option>
+                </Input>
               </Row>
               <Row>
                 <Input
