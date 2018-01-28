@@ -9,6 +9,7 @@ export const NavBar = ({ currentUser }) =>
     <NavItem href="/requests">Requests</NavItem>
     <NavItem href="/housing">Housing</NavItem>
     <NavItem href="/review">Reviews</NavItem>
+    <NavItem href="/createHome">Post</NavItem>
     {!currentUser || currentUser.isAnonymous
       ? [
           <NavItem href="/login" key={1}>

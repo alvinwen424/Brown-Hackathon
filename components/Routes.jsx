@@ -9,6 +9,7 @@ import Requests from './Requests';
 import SingleHome from './SingleHome';
 import AuthRoute from './AuthRoute';
 import Home from './Home';
+import CreateHome from './CreateHome';
 
 export const Routes = ({ currentUser }) => {
   return (
@@ -37,6 +38,13 @@ export const Routes = ({ currentUser }) => {
           path="/requests"
           component={Requests}
         />
+        <AuthRoute
+          authed={currentUser}
+          exact
+          path="/createHome"
+          component={CreateHome}
+        />
+
         <Route path="/login" render={() => <Login />} />
         <Route path="/register" render={() => <Register />} />
         <Route path="/checkout" render={() => <Checkout />} />
