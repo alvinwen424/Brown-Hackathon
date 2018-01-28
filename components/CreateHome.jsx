@@ -81,13 +81,12 @@ export default class CreateHome extends Component {
   }
 
   onChange = e => {
-    console.log(e.target.files);
     let reader = new FileReader();
     let file = e.target.files[0];
     let { files, imagePreviewUrl } = this.state;
     reader.onloadend = () => {
       this.setState({
-        file: [...files, file],
+        files: [...files, file],
         imagePreviewUrl: [...imagePreviewUrl, reader.result]
       });
     };
