@@ -1,0 +1,55 @@
+[debug] [2018-02-02T20:29:47.639Z] ----------------------------------------------------------------------
+[debug] [2018-02-02T20:29:47.643Z] Command:       /usr/local/bin/node /Users/alvinwen/Desktop/brown-hack/togobox/node_modules/.bin/firebase serve --only functions,hosting
+[debug] [2018-02-02T20:29:47.644Z] CLI Version:   3.14.0
+[debug] [2018-02-02T20:29:47.644Z] Platform:      darwin
+[debug] [2018-02-02T20:29:47.644Z] Node Version:  v8.2.1
+[debug] [2018-02-02T20:29:47.646Z] Time:          Fri Feb 02 2018 15:29:47 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:47.646Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-02T20:29:47.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-02T20:29:47.667Z] > authorizing via signed-in user
+[debug] [2018-02-02T20:29:47.671Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-02T20:29:47.671Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aHSepQW1j8dsMHGAAFN1HL4VpcXTbhpIAf7TiBpqfpw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Feb 02 2018 15:29:47 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:48.128Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-02T20:29:48.142Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/brown-hackathon  
+ Fri Feb 02 2018 15:29:48 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:48.782Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-02T20:29:48.784Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/brown-hackathon/tokens  
+ Fri Feb 02 2018 15:29:48 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:49.424Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/alvinwen/Desktop/brown-hack/togobox'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-02-02T20:29:50.471Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/brown-hackathon  
+ Fri Feb 02 2018 15:29:50 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:50.472Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/brown-hackathon/apiKeys  
+ Fri Feb 02 2018 15:29:50 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:50.472Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/brown-hackathon  
+ Fri Feb 02 2018 15:29:50 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:51.910Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-02T20:29:51.911Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943416784152/clients/_:getWebAppConfig  
+ Fri Feb 02 2018 15:29:51 GMT-0500 (EST)
+[debug] [2018-02-02T20:29:52.725Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-02T20:29:52.728Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-02T20:30:01.200Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: helloWorld: http://localhost:5001/brown-hackathon/us-central1/helloWorld
+[info] Shutting down...
+[debug] [2018-02-02T21:06:33.172Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-02-02T21:06:33.179Z] Error: write EPIPE
+    at exports._errnoException (util.js:1024:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:851:14)
+[error] 
+[error] Error: An unexpected error has occurred.

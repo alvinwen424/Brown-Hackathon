@@ -17,7 +17,10 @@ import {
   Input,
   Icon,
   MediaBox,
-  Button
+  Button,
+  Dropdown,
+  NavItem,
+
 } from 'react-materialize';
 import StandaloneSearchBox from '~/node_modules/react-google-maps/lib/components/places/StandaloneSearchBox';
 const INPUT_STYLE = {
@@ -72,7 +75,8 @@ export default class CreateHome extends Component {
       imagePreviewUrl: [],
       addrInfo: '',
       position: [],
-      roomInfo: '',
+      Restroom:'# of',
+      Rooms: '# of',
       description: '',
       userEmail: props.email,
       purpose: 'rental',
@@ -140,8 +144,13 @@ export default class CreateHome extends Component {
     //     color: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
   };
 
+  changeRooms = (e) => {
+    e.preventDefault()
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   render() {
-    let { files, imagePreviewUrl } = this.state;
+    let { files, imagePreviewUrl, Rooms, Restroom } = this.state;
     return (
       <div className="post">
         <form onSubmit={this.onSubmit}>
@@ -174,15 +183,24 @@ export default class CreateHome extends Component {
               onMarkerClicker={this.handleMarkerClicker}
             />
           </Row>
-          <Row>
-            <Input
-              s={6}
-              name="roomInfo"
-              label="Room Detail"
-              value={this.state.roomInfo}
-              onChange={this.handleInput}
-            />
-          </Row>
+          <Dropdown
+            s={6}
+            trigger={<Button>{Rooms} Bedrooms</Button>}
+          >
+            <Button onClick={this.changeRooms} name="Rooms" value ="1">one</Button>
+            <Button onClick={this.changeRooms} name="Rooms" value ="2">two</Button>
+            <Button onClick={this.changeRooms} name="Rooms" value ="3">three</Button>
+            <Button onClick={this.changeRooms} name="Rooms" value ="4">four</Button>
+          </Dropdown>
+          <Dropdown
+            s={6}
+            trigger={<Button>{Restroom} Restrooms</Button>}
+          >
+            <Button onClick={this.changeRooms} name="Restroom" value ="1">one</Button>
+            <Button onClick={this.changeRooms} name="Restroom" value ="2">two</Button>
+            <Button onClick={this.changeRooms} name="Restroom" value ="3">three</Button>
+            <Button onClick={this.changeRooms} name="Restroom" value ="4">four</Button>
+          </Dropdown>
           <Row>
             <Input
               s={6}
