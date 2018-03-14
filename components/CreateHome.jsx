@@ -71,15 +71,15 @@ export default class CreateHome extends Component {
     super(props);
     console.log(auth.currentUser);
     this.state = {
+      type: "",
       files: [],
       imagePreviewUrl: [],
       addrInfo: '',
       position: [],
       Restroom:'# of',
       Rooms: '# of',
-      description: '',
+      Description: '',
       userEmail: props.email,
-      purpose: 'rental',
       price: ''
     };
   }
@@ -98,9 +98,19 @@ export default class CreateHome extends Component {
   };
 
   onSubmit = e => {
-    let { files } = this.state;
+    let { files, type, } = this.state;
     let { email } = auth.currentUser;
     let storageRef = storage.ref();
+    let data = {
+      imagePreviewUrl,
+      addrInfo,
+      position,
+      Restroom,
+      Rooms,
+      Description,
+      userEmail,
+      price
+    }
     e.preventDefault();
     storageRef.constructor.prototype.putFiles = function(files) {
       return Promise.all(
@@ -115,6 +125,7 @@ export default class CreateHome extends Component {
       .then(function(metadatas) {
         // Get an array of file metadata
         console.log('metaData', metadatas);
+        db.collection(type).doc().set(data);
       })
       .catch(function(error) {
         console.error(error);
@@ -122,6 +133,7 @@ export default class CreateHome extends Component {
   };
 
   handleInput = evt => {
+    evt.preventDefault()
     this.setState({
       [evt.target.name]: evt.target.value
     });
@@ -144,13 +156,9 @@ export default class CreateHome extends Component {
     //     color: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
   };
 
-  changeRooms = (e) => {
-    e.preventDefault()
-    this.setState({[e.target.name]: e.target.value})
-  }
-
   render() {
-    let { files, imagePreviewUrl, Rooms, Restroom } = this.state;
+    let { files, imagePreviewUrl, Rooms, Restroom, type } = this.state;
+    console.log('state,', this.state)
     return (
       <div className="post">
         <form onSubmit={this.onSubmit}>
@@ -158,13 +166,13 @@ export default class CreateHome extends Component {
             <Input
               s={12}
               type="select"
-              name="purpose"
+              name="type"
               label="Post Purposes"
               defaultValue="2"
               onChange={this.handleInput}
             >
-              <option value="assist">Assist</option>
-              <option value="rental">Rental</option>
+              <option value="assist" >Assist</option>
+              <option value="housing">Posting Rentals</option>
             </Input>
           </Row>
           <Row>
@@ -187,35 +195,35 @@ export default class CreateHome extends Component {
             s={6}
             trigger={<Button>{Rooms} Bedrooms</Button>}
           >
-            <Button onClick={this.changeRooms} name="Rooms" value ="1">one</Button>
-            <Button onClick={this.changeRooms} name="Rooms" value ="2">two</Button>
-            <Button onClick={this.changeRooms} name="Rooms" value ="3">three</Button>
-            <Button onClick={this.changeRooms} name="Rooms" value ="4">four</Button>
+            <Button onClick={this.handleInput} name="Rooms" value ="1">one</Button>
+            <Button onClick={this.handleInput} name="Rooms" value ="2">two</Button>
+            <Button onClick={this.handleInput} name="Rooms" value ="3">three</Button>
+            <Button onClick={this.handleInput} name="Rooms" value ="4">four</Button>
           </Dropdown>
           <Dropdown
             s={6}
             trigger={<Button>{Restroom} Restrooms</Button>}
           >
-            <Button onClick={this.changeRooms} name="Restroom" value ="1">one</Button>
-            <Button onClick={this.changeRooms} name="Restroom" value ="2">two</Button>
-            <Button onClick={this.changeRooms} name="Restroom" value ="3">three</Button>
-            <Button onClick={this.changeRooms} name="Restroom" value ="4">four</Button>
+            <Button onClick={this.handleInput} name="Restroom" value ="1">one</Button>
+            <Button onClick={this.handleInput} name="Restroom" value ="2">two</Button>
+            <Button onClick={this.handleInput} name="Restroom" value ="3">three</Button>
+            <Button onClick={this.handleInput} name="Restroom" value ="4">four</Button>
           </Dropdown>
           <Row>
             <Input
               s={6}
-              name="description"
+              name="Description"
               label="Description"
-              value={this.state.description}
+              value={this.state.Description}
               onChange={this.handleInput}
             />
           </Row>
           <Row>
             <Input
               s={6}
-              name="price"
+              name="Price"
               label="Price"
-              value={this.state.price}
+              value={this.state.Price}
               onChange={this.handleInput}
             />
           </Row>
